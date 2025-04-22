@@ -943,11 +943,11 @@ body {
     padding: 22px;
     background-color: #fff;
     display: flex;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -ms-border-radius: 26px;
+    -o-border-radius: 26px;
     margin-bottom: 1rem;
     box-shadow: var(--mui-shadows-3, 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12));
     animation: scrollUp 8s linear infinite;
@@ -1842,5 +1842,48 @@ body {
     .contact-section .form-control {
         padding: 24px;
         font-size: 20px;
+    }
+
+    .kb-card .content .name {
+        font-size: 26px;
+    }
+
+    .kb-card .review-star .icon {
+        font-size: 26px;
+    }
+
+    .kb-card .review-star .count {
+        font-size: 26px;
+    }
+
+    .kb-card .content .role {
+        font-size: 20px;
+    }
+
+    .kb-card .content .review-text {
+        font-size: 20px;
+    }
+
+    .kb-card .img-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .kb-card {
+        width: 760px;
+        padding: 32px;
+        min-height: 220px;
+    }
+
+    .kb-cards-container::before {
+        width: 760px;
+    }
+
+    .kb-cards-container::after {
+        width: 760px;
+    }
+
+    .kb-cards-container {
+        height: 934px;
     }
 }
