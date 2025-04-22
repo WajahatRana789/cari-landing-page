@@ -1730,4 +1730,25 @@ body {
     .services-section .service-card .content {
         font-size: 53px;
     }
+
+    .feature-1-section .content {
+        width: 760px;
+    }
+
+    .feature-1-section .text-lg {
+        font-size: 90px;
+        line-height: 108px;
+    }
+
+    .feature-1-section .text-md {
+        font-size: 36px;
+        line-height: 50px;
+        width: 592px;
+        margin-top: 40px;
+    }
+
+    .feature-2-section .text-lg {
+        font-size: 86px;
+        line-height: 98px;
+    }
 }
