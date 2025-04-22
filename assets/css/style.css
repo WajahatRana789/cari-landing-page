@@ -843,7 +843,7 @@ body {
 .key-benefits-section {
     position: relative;
     padding: 200px 0;
-    background: linear-gradient(270deg, #EDEBFD 0%, #CAC4FA 99.99%, #A59CF7 100%);
+    background: linear-gradient(#CBC5F9, #EBE9FD);
 }
 
 .key-benefits-section .content {
@@ -882,7 +882,7 @@ body {
     left: 68px;
     width: 574px;
     height: 70px;
-    background: linear-gradient(#e1defc, transparent);
+    background: linear-gradient(#cfcaf9, transparent);
     z-index: 1;
     filter: blur(6px);
 }
@@ -894,7 +894,7 @@ body {
     left: 48px;
     width: 567px;
     height: 150px;
-    background: linear-gradient(transparent, #d8d4fb);
+    background: linear-gradient(transparent, #e7e5fd);
     z-index: 1;
     filter: blur(6px);
     margin-bottom: -8px;
@@ -1076,7 +1076,7 @@ body {
     left: 0;
     width: calc(30% + 20px);
     height: 70px;
-    background-color: #d1ccfb;
+    background-color: #eae8fd;
     border-radius: 0px 0px 80px 0px;
     -webkit-border-radius: 0px 0px 80px 0px;
     -moz-border-radius: 0px 0px 80px 0px;
@@ -1114,11 +1114,6 @@ body {
     -o-border-radius: 55px;
     object-fit: cover;
     max-width: 100%;
-    transform: scale(8);
-    -webkit-transform: scale(8);
-    -moz-transform: scale(8);
-    -ms-transform: scale(8);
-    -o-transform: scale(8);
 }
 
 .contact-section .contact-text-lg {
@@ -1750,5 +1745,102 @@ body {
     .feature-2-section .text-lg {
         font-size: 86px;
         line-height: 98px;
+    }
+
+    .feature-2-section .text-md {
+        font-size: 36px;
+
+    }
+
+    .feature-2-section .content {
+        margin-bottom: 200px;
+    }
+
+    .feature-2-section .img-box {
+        width: 495px;
+        height: 1220px;
+    }
+
+    .feature-1-section .img-box {
+        height: 1000px;
+    }
+
+    .how-it-works-slide-buttons button {
+        font-size: 36px;
+    }
+
+    .step-card .heading {
+        font-size: 66px;
+    }
+
+    .step-card .content {
+        font-size: 36px;
+    }
+
+    .step-card .content {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .key-benefits-section .content {
+        padding-left: 60px;
+    }
+
+    .key-benefits-section .content .text-lg {
+        font-size: 86px;
+    }
+
+    .key-benefits-section .content .text-md {
+        font-size: 36px;
+    }
+
+    .footer .logo-container .logo-img img {
+        width: 84px;
+        height: 84px;
+    }
+
+    .footer .logo-container .logo-text {
+        font-size: 46px;
+        margin-left: 20px;
+    }
+
+    .footer .copyright-text {
+        font-size: 24px;
+    }
+
+    .footer-links-container h6 {
+        font-size: 30px;
+    }
+
+    .footer-links-ul li a {
+        font-size: 24px;
+    }
+
+    .contact-section .contact-image-box {
+        height: 800px;
+    }
+
+    .contact-section .contact-image-box img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-section .contact-text-lg {
+        font-size: 100px;
+        line-height: 106px;
+        width: 800px;
+    }
+
+    .contact-section .contact-text-md {
+        font-size: 36px;
+        line-height: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .contact-section .form-control {
+        padding: 24px;
+        font-size: 20px;
     }
 }

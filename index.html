@@ -410,7 +410,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="contact-form-container">
                             <div class="contact-text-lg">
-                                <div class="fade-down-anim">Bring CARI to your Campus</div>
+                                <div class="fade-down-anim">Bring CARI <br> to your Campus</div>
                             </div>
                             <div class="contact-text-md">
                                 <div class="fade-up-anim">Let's talk about how CARI can improve your dining operations
@@ -444,7 +444,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <div class="mb-3 fade-down-anim" data-delay="0.75">
+                                            <div class="mb-3">
                                                 <input type="text" placeholder="Preferred Call Time"
                                                     class="form-control" id="preferredCallTimeInput">
                                             </div>
@@ -699,26 +699,6 @@
             });
         });
 
-        gsap.to($('.contact-image-box img')[0], {
-            scale: 1,
-            duration: 1,
-            scrollTrigger: {
-                trigger: $('.contact-image-box')[0],
-                start: 'top 80%', // adjust as needed
-                toggleActions: 'play none none reverse'
-            }
-        });
-
-        gsap.to($('.contact-image-box img')[0], {
-            scale: 1,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: $('.contact-image-box')[0],
-                start: 'top bottom',      // animation starts when container enters viewport
-                end: 'top center',        // animation ends when container reaches center
-                scrub: true,              // smooth scroll-linked animation
-            }
-        });
 
         gsap.to($('.feature-2-section .img-box img')[0], {
             scale: 1,
