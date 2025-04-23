@@ -124,17 +124,43 @@ body {
 }
 
 .btn-primary {
+    position: relative;
     color: #fff;
     background: linear-gradient(90deg, #4786FF 0%, #4B39EF 115%);
     padding: 12px 40px;
     font-weight: 600;
     height: 60px;
     padding-top: 16px;
+    overflow: hidden;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
 }
 
-.btn-primary:hover {
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(90deg, #4B39EF 0%, #4786FF 115%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
 }
+
+.btn-primary:hover::before {
+    opacity: 1;
+}
+
+.btn-primary>div {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* Buttons End */
 
@@ -407,6 +433,20 @@ body {
     padding: 200px 2rem;
 }
 
+.services-section::after {
+    content: '';
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: calc(50% - 80px);
+    height: 100%;
+    background: linear-gradient(to left, #A59CF7, transparent);
+}
+
+.services-section .container-fluid {
+    z-index: 2;
+}
+
 .services-section .rect-top-1 {
     position: absolute;
     top: -100px;
@@ -447,15 +487,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 520px;
-    transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    z-index: 2;
 }
 
 .services-section .service-card:hover {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
 }
 
 .services-section .service-card .header {
@@ -469,6 +510,11 @@ body {
     position: relative;
     font-size: 60px;
     color: #656D79;
+    transition: color 500ms ease-in-out;
+    -webkit-transition: color 500ms ease-in-out;
+    -moz-transition: color 500ms ease-in-out;
+    -ms-transition: color 500ms ease-in-out;
+    -o-transition: color 500ms ease-in-out;
 }
 
 .services-section .service-card:hover .header .icon {
@@ -485,10 +531,6 @@ body {
     margin-top: auto;
 }
 
-.services-section .service-card:hover .content {
-    color: #4B39EF;
-}
-
 .services-section .service-card.bg-primary-gradient {
     background: linear-gradient(#8072F3, #4D3CEF);
     color: #fff;
@@ -502,16 +544,8 @@ body {
     color: #fff;
 }
 
-.services-section .service-card.bg-primary-gradient:hover {
-    background: #fff;
-}
-
 .services-section .service-card.bg-primary-gradient:hover .header .icon {
-    color: #4B39EF;
-}
-
-.services-section .service-card.bg-primary-gradient:hover .content {
-    color: #4B39EF;
+    color: #F3D600;
 }
 
 /* Services Section End */
@@ -1885,5 +1919,13 @@ body {
 
     .kb-cards-container {
         height: 934px;
+    }
+
+    .contact-section .btn-primary {
+        height: 64px;
+        padding-top: 16px;
+        font-size: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
