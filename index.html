@@ -713,6 +713,22 @@
 
     <script>
 
+        let kbCardsAnimationInterval = null;
+
+        function layoutCards() {
+            const container = $('.kb-cards-container');
+            const cards = container.children('.kb-card');
+            const cardHeight = cards.first().outerHeight(true);
+
+            // Reposition all cards absolutely
+            cards.each(function (i) {
+                $(this).css({
+                    position: 'absolute',
+                    top: i * cardHeight,
+                    left: 0
+                });
+            });
+        }
         function rotateCards() {
             const container = $('.kb-cards-container');
             const cards = container.children('.kb-card');
@@ -753,25 +769,27 @@
                 }, 300);
 
                 // Loop again
-                setTimeout(rotateCards, 1500);
+                kbCardsAnimationInterval = setTimeout(rotateCards, 1500);
             });
         }
 
         $(document).ready(function () {
-            const container = $('.kb-cards-container');
-            const cards = container.children('.kb-card');
-            const cardHeight = cards.first().outerHeight(true);
-
-            // Initial layout
-            cards.each(function (i) {
-                $(this).css({
-                    position: 'absolute',
-                    top: i * cardHeight,
-                    left: 0
-                });
-            });
-
+            layoutCards();
             rotateCards();
+
+            // Re-layout on window resize
+
+            let resizeTimeout;
+
+            $(window).on('resize', function () {
+                clearTimeout(resizeTimeout); // clear previous timeout on every resize
+                resizeTimeout = setTimeout(function () {
+                    // This runs only when resizing stops for 300ms
+                    clearTimeout(kbCardsAnimationInterval); // stop animation loop
+                    layoutCards();  // reposition cards
+                    rotateCards();  // restart animation
+                }, 500); // wait 300ms after last resize event
+            });
         });
 
     </script>
