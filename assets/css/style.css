@@ -830,7 +830,7 @@ body {
     font-weight: 700;
     font-size: 52px;
     line-height: 80px;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     margin-bottom: 24px;
     color: #fff;
 }
@@ -1310,6 +1310,8 @@ body {
 
     .contact-section .contact-image-box img {
         width: 100%;
+        height: 500px;
+        object-fit: fill;
     }
 
     .contact-section .contact-form-container {
@@ -1563,10 +1565,20 @@ body {
         padding-bottom: 30px;
     }
 
+    .step-card .content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .how-it-works-slide-buttons {
+        padding-bottom: 50px;
+    }
+
     .how-it-works-slide-buttons button {
         text-align: left;
-        font-size: 18px;
-        padding: 8px 16px;
+        font-size: 16px;
+        padding: 8px 14px;
+        display: block;
     }
 
     .feature-2-section {
@@ -1612,6 +1624,7 @@ body {
     .step-card {
         width: 100%;
         height: auto;
+        padding: 32px;
     }
 
     .steps-section-inner {
@@ -1620,7 +1633,8 @@ body {
 
     .step-card .heading {
         font-weight: 700;
-        font-size: 40px;
+        font-size: 36px;
+        line-height: 36px;
     }
 
     .step-card .content {
