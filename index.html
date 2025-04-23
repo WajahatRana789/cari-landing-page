@@ -336,8 +336,7 @@
                                     </div>
                                     <div class="role">Owner Of Restaurant</div>
                                     <div class="review-text">
-                                        CARI makes my life so easy as a restaurant owner. I wouldn't be where I am today
-                                        without CARI
+                                        CARI has increase my orders by over 200%. I love working with CARI!
                                     </div>
                                 </div>
                             </div>
@@ -345,7 +344,7 @@
                                 <div class="img-container"></div>
                                 <div class="content">
                                     <div class="reviewer-info">
-                                        <div class="name">Thad Lipinski</div>
+                                        <div class="name">Bruce Alvarez</div>
                                         <div class="review-star">
                                             <div class="icon"><i class="bx bxs-star"></i></div>
                                             <div class="count">5</div>
@@ -379,13 +378,13 @@
                                 <div class="img-container"></div>
                                 <div class="content">
                                     <div class="reviewer-info">
-                                        <div class="name">Thad Lipinski</div>
+                                        <div class="name">Darrell Steward</div>
                                         <div class="review-star">
                                             <div class="icon"><i class="bx bxs-star"></i></div>
                                             <div class="count">5</div>
                                         </div>
                                     </div>
-                                    <div class="role">Owner Of Restaurant</div>
+                                    <div class="role">Love 'em so much - I bought two!</div>
                                     <div class="review-text">
                                         CARI makes my life so easy as a restaurant owner. I wouldn't be where I am today
                                         without CARI
@@ -712,6 +711,70 @@
         });
     </script>
 
+    <script>
+
+        function rotateCards() {
+            const container = $('.kb-cards-container');
+            const cards = container.children('.kb-card');
+
+            let positions = [];
+            cards.each(function () {
+                positions.push($(this).position().top);
+            });
+
+            const firstCard = cards.eq(0);
+
+            // Animate first card out to the right
+            firstCard.animate({
+                top: '-500px',
+                opacity: 0
+            }, 500, function () {
+                const lastTop = positions[positions.length - 1];
+                const lastOffset = lastTop + $(this).outerHeight(true);
+
+                // Immediately move first card below all
+                $(this).css({
+                    top: lastOffset,
+                    left: 0
+                });
+
+                // Append to container
+                container.append(this);
+
+                // Animate other cards upward
+                for (let i = 1; i < cards.length; i++) {
+                    cards.eq(i).animate({ top: positions[i - 1] }, 300);
+                }
+
+                // Animate first card up to the last position
+                $(this).animate({
+                    top: lastTop,
+                    opacity: 1
+                }, 300);
+
+                // Loop again
+                setTimeout(rotateCards, 1500);
+            });
+        }
+
+        $(document).ready(function () {
+            const container = $('.kb-cards-container');
+            const cards = container.children('.kb-card');
+            const cardHeight = cards.first().outerHeight(true);
+
+            // Initial layout
+            cards.each(function (i) {
+                $(this).css({
+                    position: 'absolute',
+                    top: i * cardHeight,
+                    left: 0
+                });
+            });
+
+            rotateCards();
+        });
+
+    </script>
 </body>
 
 </html>
