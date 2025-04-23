@@ -640,7 +640,7 @@ body {
 .feature-2-section {
     position: relative;
     padding: 0;
-    background-color: linear-gradient(#EDEBFD 40%, #A59CF7);
+    background: linear-gradient(#EDEBFD 40%, #aea5f9);
 }
 
 .feature-2-section .text-lg {
@@ -717,6 +717,12 @@ body {
     background-color: transparent;
     margin: 0 10px;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.how-it-works-slide-buttons button>div:nth-child(1) {
+    margin-right: 8px;
 }
 
 .how-it-works-slide-buttons button:hover,
@@ -1428,6 +1434,7 @@ body {
 
     .feature-2-section .content {
         padding-top: 30px;
+        padding-left: 0;
     }
 
     .feature-2-section .text-lg {
@@ -1529,6 +1536,13 @@ body {
     .about-section .about-flex-container .about-content {
         margin-top: -80px;
         width: 100%;
+        padding-top: 0;
+    }
+
+    .hero-section img.hero-curve {
+        bottom: -65px;
+        right: -2px;
+        width: 260px;
     }
 
     .about-section .about-flex-container .about-content .content-1 {
@@ -1549,6 +1563,11 @@ body {
         padding-bottom: 30px;
     }
 
+    .how-it-works-slide-buttons button {
+        text-align: left;
+        font-size: 18px;
+        padding: 8px 16px;
+    }
 
     .feature-2-section {
         padding: 50px 0;
@@ -1560,6 +1579,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        top: -120px;
+        margin-bottom: -120px;
     }
 
     .feature-2-section .img-box img {
