@@ -913,8 +913,8 @@ body {
     content: '';
     position: absolute;
     top: -20px;
-    left: 68px;
-    width: 574px;
+    left: -400px;
+    width: calc(100% + 400px);
     height: 70px;
     background: linear-gradient(#cfcaf9, transparent);
     z-index: 1;
