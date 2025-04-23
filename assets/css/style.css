@@ -640,7 +640,7 @@ body {
 .feature-2-section {
     position: relative;
     padding: 0;
-    background-color: #EDEBFD;
+    background-color: linear-gradient(#EDEBFD 40%, #A59CF7);
 }
 
 .feature-2-section .text-lg {
@@ -1247,17 +1247,42 @@ body {
 }
 
 .footer-links-ul li a {
+    position: relative;
     color: #000000;
     font-weight: 500;
     text-decoration: none;
     display: flex;
     align-items: center;
+    width: max-content;
     padding: 6px 0;
+    transition: color 300ms ease-in-out;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+}
+
+.footer-links-ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #4B39EF;
+    transition: width 500ms ease-in-out;
+    -webkit-transition: width 500ms ease-in-out;
+    -moz-transition: width 500ms ease-in-out;
+    -ms-transition: width 500ms ease-in-out;
+    -o-transition: width 500ms ease-in-out;
 }
 
 .footer-links-ul li a:hover {
     color: #4B39EF;
-    text-decoration: underline;
+}
+
+.footer-links-ul li a:hover:before {
+    width: 100%;
 }
 
 .footer-links-ul li a .text {
@@ -1921,11 +1946,24 @@ body {
         height: 934px;
     }
 
-    .contact-section .btn-primary {
-        height: 64px;
+    .contact-section .buttons-container {
+        margin-top: 3rem;
+    }
+
+    .contact-section .buttons-container .btn-primary {
+        height: 74px;
         padding-top: 16px;
         font-size: 22px;
         padding-left: 30px;
         padding-right: 30px;
+        width: 100%;
+    }
+
+    .contact-section .buttons-container .btn-primary:nth-child(1) {
+        margin-right: 12px;
+    }
+
+    .contact-section .buttons-container .btn-primary:nth-child(2) {
+        margin-left: 12px;
     }
 }
