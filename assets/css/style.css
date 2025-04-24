@@ -608,12 +608,13 @@ body {
 
 .feature-1-section .img-box {
     position: relative;
-    top: 0px;
+    top: -2px;
     left: -75px;
     width: calc(100% + 45px);
     height: 100%;
     overflow: hidden;
     height: 900px;
+    margin-bottom: -2px;
 }
 
 .feature-1-section .img-box img {
