@@ -562,7 +562,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0;
-    width: calc(50% + 20px);
+    width: calc(50% + 30px);
     height: 70px;
     background-color: #edebfd;
     border-radius: 0px 0px 80px 0px;
@@ -575,8 +575,8 @@ body {
 .feature-1-section .rect-top-2 {
     position: absolute;
     top: -70px;
-    left: calc(50% + 20px);
-    width: calc(50% + 20px);
+    left: calc(50% + 30px);
+    width: calc(50% + 30px);
     height: 70px;
     background-color: #4B39EF;
     border-radius: 80px 0px 0px 0px;
@@ -620,9 +620,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% - 12px);
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: #edebfd;
 }
 
 .feature-1-section .content {
@@ -1812,6 +1813,7 @@ body {
 
     .feature-1-section .content {
         width: 760px;
+        padding-top: 240px;
     }
 
     .feature-1-section .text-lg {
@@ -1846,7 +1848,7 @@ body {
     }
 
     .feature-1-section .img-box {
-        height: 1000px;
+        height: 1250px;
     }
 
     .how-it-works-slide-buttons button {
