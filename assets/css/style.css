@@ -560,7 +560,7 @@ body {
 
 .feature-1-section .rect-top-1 {
     position: absolute;
-    top: 0px;
+    top: -2px;
     left: 0;
     width: calc(50% + 30px);
     height: 70px;
