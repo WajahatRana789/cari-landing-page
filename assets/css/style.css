@@ -1299,6 +1299,14 @@ body {
 
 
 @media(max-width: 991px) {
+    .feature-1-section .img-box {
+        height: 1100px;
+    }
+
+    .feature-1-section .img-box img {
+        background-color: #4b39ef;
+    }
+
     .container-fluid {
         padding-left: 2rem;
         padding-right: 2rem;
