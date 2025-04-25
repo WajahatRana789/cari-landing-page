@@ -50,9 +50,9 @@
                                 Together - One <i>Meal</i> at
                                 a <i>Time</i>.
                             </div>
-                            <div class="join-now-button fade-down-anim">
+                            <a href="#contact-section" class="join-now-button fade-down-anim">
                                 <button>Join Now</button>
-                            </div>
+                            </a>
                         </div>
                         <div class="hero-center">
                             <div class="hero-center-big-text fade-up-anim" data-delay="0.3">
@@ -74,8 +74,13 @@
                             </div>
 
                             <div class="mobile-app-links">
-                                <img src="assets/images/google_play_badge.png" alt="google play">
-                                <img src="assets/images/app_store_badge.png" alt="app store">
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.delivery.cari&pcampaignid=web_share">
+                                    <img src="assets/images/google_play_badge.png" alt="google play">
+                                </a>
+                                <a href="https://apps.apple.com/us/app/cari-delivery/id6602897688">
+                                    <img src="assets/images/app_store_badge.png" alt="app store">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -334,14 +339,9 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-7">
                         <div class="kb-cards-container">
                             <div class="kb-card">
-                                <div class="img-container"></div>
                                 <div class="content">
                                     <div class="reviewer-info">
                                         <div class="name">Thad Lipinski</div>
-                                        <div class="review-star">
-                                            <div class="icon"><i class="bx bxs-star"></i></div>
-                                            <div class="count">5</div>
-                                        </div>
                                     </div>
                                     <div class="role">Owner Of Restaurant</div>
                                     <div class="review-text">
@@ -350,14 +350,9 @@
                                 </div>
                             </div>
                             <div class="kb-card">
-                                <div class="img-container"></div>
                                 <div class="content">
                                     <div class="reviewer-info">
                                         <div class="name">Bruce Alvarez</div>
-                                        <div class="review-star">
-                                            <div class="icon"><i class="bx bxs-star"></i></div>
-                                            <div class="count">5</div>
-                                        </div>
                                     </div>
                                     <div class="role">Owner Of Restaurant</div>
                                     <div class="review-text">
@@ -367,14 +362,9 @@
                                 </div>
                             </div>
                             <div class="kb-card">
-                                <div class="img-container"></div>
                                 <div class="content">
                                     <div class="reviewer-info">
                                         <div class="name">Thad Lipinski</div>
-                                        <div class="review-star">
-                                            <div class="icon"><i class="bx bxs-star"></i></div>
-                                            <div class="count">5</div>
-                                        </div>
                                     </div>
                                     <div class="role">Owner Of Restaurant</div>
                                     <div class="review-text">
@@ -384,14 +374,9 @@
                                 </div>
                             </div>
                             <div class="kb-card">
-                                <div class="img-container"></div>
                                 <div class="content">
                                     <div class="reviewer-info">
                                         <div class="name">Darrell Steward</div>
-                                        <div class="review-star">
-                                            <div class="icon"><i class="bx bxs-star"></i></div>
-                                            <div class="count">5</div>
-                                        </div>
                                     </div>
                                     <div class="role">Love 'em so much - I bought two!</div>
                                     <div class="review-text">
@@ -525,7 +510,7 @@
                                     <div class="mt-4">
                                         <ul class="footer-links-ul">
                                             <li>
-                                                <a href="#">
+                                                <a href="https://www.instagram.com/cari_delivery">
                                                     <div class="icon">
                                                         <i class="bx bxl-instagram"></i>
                                                     </div>
@@ -533,7 +518,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="https://www.linkedin.com/company/caridelivery">
                                                     <div class="icon">
                                                         <i class="bx bxl-linkedin"></i>
                                                     </div>
@@ -571,11 +556,88 @@
 
     <script>
         $(function () {
-            $('.how-it-works-slides').slick({
+
+            // 
+            // debounce from underscore.js
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function () {
+                    var context = this, args = arguments;
+                    var later = function () {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(context, args);
+                }
+            }
+
+            // use x and y mousewheel event data to navigate flickity
+            function slick_handle_wheel_event(e, slick_instance, slick_is_animating) {
+                // do not trigger a slide change if another is being animated
+                if (!slick_is_animating) {
+                    // pick the larger of the two delta magnitudes (x or y) to determine nav direction
+                    var direction =
+                        Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+
+                    console.log('wheel scroll ', e.deltaX, e.deltaY, direction);
+
+                    if (direction > 0) {
+                        // next slide
+                        slick_instance.slick('slickNext');
+                    } else {
+                        // prev slide
+                        slick_instance.slick('slickPrev');
+                    }
+                }
+            }
+
+            // debounce the wheel event handling since trackpads can have a lot of inertia
+            var slick_handle_wheel_event_debounced = debounce(
+                slick_handle_wheel_event
+                , 100, true
+            );
+
+
+            // slider
+            const slider = $('.how-it-works-slides');
+            slider.slick({
+                // Basic settings
+                slidesToShow: 1,
                 slidesToScroll: 1,
+
+                // Touch settings
+                touchThreshold: 5, // How many pixels to move before considering it a swipe
+                swipe: true, // Enable swiping
+                swipeToSlide: true, // Swipe directly to slide (not just one at a time)
+                draggable: true, // Enable mouse dragging
+
+                // Trackpad/scroll settings
+                waitForAnimate: false, // Don't wait for animation to complete
+                useTransform: true, // Use CSS transforms for smoother scrolling
+
+                // Optional settings
                 autoplay: true,
                 autoplaySpeed: 2000,
             });
+            var slider_is_animating = false;
+
+            slider.on('afterChange', function (index) {
+                console.log('Slide settle ' + index);
+                slider_is_animating = false;
+            });
+
+            slider.on('beforeChange', function (index) {
+                console.log('Slide selected ' + index);
+                slider_is_animating = true;
+            });
+
+            slider.on('wheel', function (e) {
+                slick_handle_wheel_event_debounced(e.originalEvent, slider, slider_is_animating);
+            });
+
 
             // Button click to go to specific slide
             $('.how-it-works-slide-buttons button').on('click', function () {

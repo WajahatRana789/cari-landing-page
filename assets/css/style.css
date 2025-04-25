@@ -247,6 +247,10 @@ body {
 .hero-section .join-now-button {
     position: relative;
     margin-left: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-section .join-now-button button {
@@ -1100,6 +1104,10 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 1.5rem;
+}
+
+.contact-section .buttons-container .btn-primary {
+    outline: 2px solid #fff;
 }
 
 .contact-section .rect-top-1 {
