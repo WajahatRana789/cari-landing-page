@@ -18,8 +18,7 @@
     <!-- Box Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <!-- Skeletabs -->
-    <link rel="stylesheet" href="assets/vendor/skeletabs/dist/skeletabs.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
     <!-- Slick Slider -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
@@ -452,7 +451,7 @@
                                         <i class="bx bx-up-arrow-alt"></i>
                                     </div>
                                 </button>
-                                <button class="btn btn-primary has-icon">
+                                <button class="btn btn-primary has-icon" id="btnScheduleCall">
                                     <div>SCHEDULE A CALL</div>
                                     <div class="icon" style="transform: rotate(45deg); font-size: 20px;">
                                         <i class="bx bx-up-arrow-alt"></i>
@@ -545,14 +544,30 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <!-- Skeletabs -->
-    <script src="assets/vendor/skeletabs/dist/skeletabs.js"></script>
 
     <!-- Slick Slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Calendly badge widget begin -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            Calendly.initBadgeWidget({
+                url: 'https://calendly.com/contact-caridelivery/30min',
+                text: 'SCHEDULE A CALL',
+                color: '#0069ff',
+                textColor: '#ffffff'
+            });
+
+            $('.calendly-badge-widget').hide();
+            $('#btnScheduleCall').on('click', () => {
+                $('.calendly-badge-content').click();
+            });
+        }
+    </script>
+    <!-- Calendly badge widget end -->
 
     <script>
         $(function () {
@@ -581,8 +596,6 @@
                     // pick the larger of the two delta magnitudes (x or y) to determine nav direction
                     var direction =
                         Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-
-                    console.log('wheel scroll ', e.deltaX, e.deltaY, direction);
 
                     if (direction > 0) {
                         // next slide
@@ -625,12 +638,10 @@
             var slider_is_animating = false;
 
             slider.on('afterChange', function (index) {
-                console.log('Slide settle ' + index);
                 slider_is_animating = false;
             });
 
             slider.on('beforeChange', function (index) {
-                console.log('Slide selected ' + index);
                 slider_is_animating = true;
             });
 
