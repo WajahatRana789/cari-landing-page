@@ -1727,6 +1727,8 @@ body {
 
     .step-card .flex-container img {
         object-fit: contain !important;
+        width: 300px;
+        height: 300px;
     }
 }
 
