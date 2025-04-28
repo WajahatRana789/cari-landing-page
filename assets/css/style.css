@@ -884,6 +884,8 @@ body {
     position: relative;
     height: 200px;
     object-fit: contain;
+    filter: hue-rotate(55deg);
+    -webkit-filter: hue-rotate(55deg);
 }
 
 .step-card .flex-container .img-box img.dollar-img {
@@ -891,6 +893,8 @@ body {
     position: relative;
     height: 200px;
     object-fit: contain;
+    filter: hue-rotate(55deg);
+    -webkit-filter: hue-rotate(55deg);
 }
 
 .step-card .content {
