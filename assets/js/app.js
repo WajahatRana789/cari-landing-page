@@ -1,7 +1,83 @@
 
-$(function () {
+const initAnimation = () => {
+    ScrollReveal().reveal('.fade-up', {
+        origin: 'bottom',
+        distance: '40px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        opacity: 0,
+        viewFactor: 0.2 // reveal when 20% of the element is visible
+    });
 
-    // 
+    ScrollReveal().reveal('.fade-down', {
+        origin: 'top',
+        distance: '40px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        opacity: 0,
+        viewFactor: 0.2
+    });
+}
+
+const initParallaxEffect = () => {
+    const container = document.querySelector(".about-images");
+    const image1 = container.querySelector(".image-1");
+    const image2 = container.querySelector(".image-2");
+    let idleTween;
+
+    const strength = 30;
+
+    // Animate on mousemove
+    container.addEventListener("mousemove", (e) => {
+        if (idleTween) idleTween.kill(); // stop idle animation
+
+        const bounds = container.getBoundingClientRect();
+        const x = e.clientX - bounds.left - bounds.width / 2;
+        const y = e.clientY - bounds.top - bounds.height / 2;
+
+        gsap.to(image1, {
+            x: x / strength,
+            y: y / strength,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+
+        gsap.to(image2, {
+            x: -x / strength,
+            y: -y / strength,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+    });
+
+    // Start idle animation on mouse enter
+    container.addEventListener("mouseenter", () => {
+        if (idleTween) idleTween.kill();
+
+        idleTween = gsap.timeline({ repeat: -1, yoyo: true })
+            .to(image1, { x: 3, y: -3, duration: 2, ease: "sine.inOut" })
+            .to(image1, { x: -3, y: 3, duration: 2, ease: "sine.inOut" }, 0)
+            .to(image2, { x: -3, y: 3, duration: 2, ease: "sine.inOut" }, 0)
+            .to(image2, { x: 3, y: -3, duration: 2, ease: "sine.inOut" }, 2);
+    });
+
+    // Reset on leave
+    container.addEventListener("mouseleave", () => {
+        if (idleTween) idleTween.kill();
+
+        gsap.to([image1, image2], {
+            x: 0,
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out"
+        });
+    });
+}
+
+$(document).ready(function () {
+    initAnimation();
+    initParallaxEffect();
+
     // debounce from underscore.js
     function debounce(func, wait, immediate) {
         var timeout;
@@ -99,190 +175,66 @@ $(function () {
     $('.how-it-works-slide-buttons button[data-slide="' + initialSlide + '"]').addClass('active');
 
 
-    // animation start
-    gsap.registerPlugin(ScrollTrigger);
+    let kbCardsAnimationInterval = null;
 
-    gsap.utils.toArray('.fade-up-anim').forEach((elem) => {
-        const delay = $(elem).data('delay');
-        const props = {
-            scrollTrigger: {
-                trigger: elem,
-                start: 'top 100%', // adjust as needed
-                toggleActions: 'play none none reverse',
-            },
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power2.out'
-        }
+    function layoutCards() {
+        const container = $('.kb-cards-container');
+        const cards = container.children('.kb-card');
+        const cardHeight = cards.first().outerHeight(true);
 
-        if (delay) {
-            props.delay = delay;
-        }
+        // Reposition all cards absolutely
+        cards.each(function (i) {
+            $(this).css({
+                position: 'absolute',
+                top: i * cardHeight,
+                left: 0
+            });
+        });
+    }
+    function rotateCards() {
+        const container = $('.kb-cards-container');
+        const cards = container.children('.kb-card');
 
-        gsap.to(elem, props);
-    });
-
-    gsap.utils.toArray('.fade-down-anim').forEach((elem) => {
-        const delay = $(elem).data('delay');
-        const props = {
-            scrollTrigger: {
-                trigger: elem,
-                start: 'top 100%',
-                toggleActions: 'play none none reverse',
-            },
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power2.out'
-        }
-
-        if (delay) {
-            props.delay = delay;
-        }
-
-        gsap.to(elem, props);
-    });
-
-    // Animate top phone (float up and fade)
-    gsap.to('.about-image-1', {
-        scale: 1,
-        opacity: 1,
-        scrollTrigger: {
-            trigger: '.about-images',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: true,
-        }
-    });
-
-    // Animate bottom phone (scale up and rise)
-    gsap.to('.about-image-2', {
-        scale: 1,
-        opacity: 1,
-        scrollTrigger: {
-            trigger: '.about-images',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: true,
-        }
-    });
-
-
-    const container = document.querySelector(".about-images");
-    const image1 = container.querySelector(".image-1");
-    const image2 = container.querySelector(".image-2");
-
-    container.addEventListener("mousemove", (e) => {
-        const bounds = container.getBoundingClientRect();
-        const x = e.clientX - bounds.left - bounds.width / 2;
-        const y = e.clientY - bounds.top - bounds.height / 2;
-
-        // Adjust strength
-        const strength = 30;
-
-        // Animate image1 and image2 in opposite directions
-        gsap.to(image1, {
-            x: x / strength,
-            y: y / strength,
-            duration: 0.5,
-            ease: "power2.out"
+        let positions = [];
+        cards.each(function () {
+            positions.push($(this).position().top);
         });
 
-        gsap.to(image2, {
-            x: -x / strength,
-            y: -y / strength,
-            duration: 0.5,
-            ease: "power2.out"
+        const firstCard = cards.eq(0);
+
+        // Animate first card out to the right
+        firstCard.animate({
+            top: '-500px',
+            opacity: 0
+        }, 500, function () {
+            const lastTop = positions[positions.length - 1];
+            const lastOffset = lastTop + $(this).outerHeight(true);
+
+            // Immediately move first card below all
+            $(this).css({
+                top: lastOffset,
+                left: 0
+            });
+
+            // Append to container
+            container.append(this);
+
+            // Animate other cards upward
+            for (let i = 1; i < cards.length; i++) {
+                cards.eq(i).animate({ top: positions[i - 1] }, 300);
+            }
+
+            // Animate first card up to the last position
+            $(this).animate({
+                top: lastTop,
+                opacity: 1
+            }, 300);
+
+            // Loop again
+            kbCardsAnimationInterval = setTimeout(rotateCards, 1500);
         });
-    });
+    }
 
-    container.addEventListener("mouseleave", () => {
-        // Reset positions
-        gsap.to([image1, image2], {
-            x: 0,
-            y: 0,
-            duration: 0.5,
-            ease: "power2.out"
-        });
-    });
-
-
-    gsap.to($('.feature-2-section .img-box img')[0], {
-        scale: 1,
-        duration: 1.2, // animation time in seconds
-        ease: 'power2.out',
-        scrollTrigger: {
-            trigger: $('.feature-2-section .img-box')[0],
-            start: 'top 80%',
-            toggleActions: 'play none none reverse'
-        }
-    });
-    // animation end
-});
-
-
-let kbCardsAnimationInterval = null;
-
-function layoutCards() {
-    const container = $('.kb-cards-container');
-    const cards = container.children('.kb-card');
-    const cardHeight = cards.first().outerHeight(true);
-
-    // Reposition all cards absolutely
-    cards.each(function (i) {
-        $(this).css({
-            position: 'absolute',
-            top: i * cardHeight,
-            left: 0
-        });
-    });
-}
-function rotateCards() {
-    const container = $('.kb-cards-container');
-    const cards = container.children('.kb-card');
-
-    let positions = [];
-    cards.each(function () {
-        positions.push($(this).position().top);
-    });
-
-    const firstCard = cards.eq(0);
-
-    // Animate first card out to the right
-    firstCard.animate({
-        top: '-500px',
-        opacity: 0
-    }, 500, function () {
-        const lastTop = positions[positions.length - 1];
-        const lastOffset = lastTop + $(this).outerHeight(true);
-
-        // Immediately move first card below all
-        $(this).css({
-            top: lastOffset,
-            left: 0
-        });
-
-        // Append to container
-        container.append(this);
-
-        // Animate other cards upward
-        for (let i = 1; i < cards.length; i++) {
-            cards.eq(i).animate({ top: positions[i - 1] }, 300);
-        }
-
-        // Animate first card up to the last position
-        $(this).animate({
-            top: lastTop,
-            opacity: 1
-        }, 300);
-
-        // Loop again
-        kbCardsAnimationInterval = setTimeout(rotateCards, 1500);
-    });
-}
-
-$(document).ready(function () {
     layoutCards();
     rotateCards();
 
