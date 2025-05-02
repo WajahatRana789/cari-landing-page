@@ -74,6 +74,20 @@ const initParallaxEffect = () => {
     });
 }
 
+const adjustSlickCardHeight = () => {
+    const cards = $('#how-it-works-section').find('.step-card');
+    let maxHeight = 0;
+
+    cards.each(function () {
+        const cardHeight = $(this).outerHeight(true);
+        if (cardHeight > maxHeight) {
+            maxHeight = cardHeight;
+        }
+    });
+
+    cards.attr('style', 'min-height: ' + maxHeight + 'px');
+}
+
 $(document).ready(function () {
     initAnimation();
     initParallaxEffect();
@@ -144,10 +158,12 @@ $(document).ready(function () {
 
     slider.on('afterChange', function (index) {
         slider_is_animating = false;
+        adjustSlickCardHeight();
     });
 
     slider.on('beforeChange', function (index) {
         slider_is_animating = true;
+        adjustSlickCardHeight();
     });
 
     slider.on('wheel', function (e) {
@@ -251,4 +267,7 @@ $(document).ready(function () {
             rotateCards();  // restart animation
         }, 500); // wait 300ms after last resize event
     });
+
+
+    adjustSlickCardHeight();
 });

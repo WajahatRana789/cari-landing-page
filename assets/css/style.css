@@ -2086,4 +2086,33 @@ body {
     .contact-section .contact-form-container {
         margin-top: 40px;
     }
+
+    .step-card .content {
+        line-height: 1.5;
+    }
+
+    .step-card .flex-container .img-box {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+
+    .step-card .flex-container .img-box img {
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        padding: 10px;
+    }
+
+    .step-card .flex-container .img-box img.route-image,
+    .step-card .flex-container .img-box img.dollar-img {
+        padding: 50px;
+    }
 }
