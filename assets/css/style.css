@@ -2065,3 +2065,52 @@ body {
         left: 220px;
     }
 }
+
+@media(max-width: 600px) {
+    .about-section .about-flex-container .about-content {
+        padding: 0;
+    }
+
+    .feature-1-section .text-md {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .feature-1-section .content {
+        width: 100%;
+    }
+
+    .feature-2-section .content {
+        padding-top: 0;
+    }
+
+    .feature-2-section .text-md {
+        padding-right: 0;
+    }
+
+    .feature-2-section .img-box {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .steps-section {
+        padding-bottom: 0;
+    }
+
+    .contact-section {
+        padding-top: 80px;
+    }
+
+    .contact-section .contact-image-box {
+        padding: 0;
+    }
+
+    .contact-section .contact-image-box img {
+        object-fit: cover;
+    }
+
+    .contact-section .contact-form-container {
+        margin-top: 40px;
+    }
+}
