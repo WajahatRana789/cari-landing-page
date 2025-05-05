@@ -222,7 +222,7 @@ $(document).ready(function () {
         firstCard.animate({
             top: '-500px',
             opacity: 0
-        }, 500, function () {
+        }, 1000, function () {
             const lastTop = positions[positions.length - 1];
             const lastOffset = lastTop + $(this).outerHeight(true);
 
@@ -237,7 +237,7 @@ $(document).ready(function () {
 
             // Animate other cards upward
             for (let i = 1; i < cards.length; i++) {
-                cards.eq(i).animate({ top: positions[i - 1] }, 300);
+                cards.eq(i).animate({ top: positions[i - 1] }, 1000);
             }
 
             // Animate first card up to the last position
@@ -247,7 +247,7 @@ $(document).ready(function () {
             }, 300);
 
             // Loop again
-            kbCardsAnimationInterval = setTimeout(rotateCards, 1500);
+            kbCardsAnimationInterval = setTimeout(rotateCards, 3000);
         });
     }
 
