@@ -153,6 +153,7 @@ $(document).ready(function () {
         // Optional settings
         autoplay: true,
         autoplaySpeed: 2000,
+        pauseOnHover: true
     });
     var slider_is_animating = false;
 
