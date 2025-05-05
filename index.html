@@ -64,7 +64,7 @@
                                 your campus </div>
 
                             <div class="my-4 py-3">
-                                <button class="btn btn-primary has-icon">
+                                <button class="btn btn-primary has-icon" id="btnDownloadApp">
                                     <div>GET CARI NOW</div>
                                     <div class="icon" style="transform: rotate(45deg); font-size: 20px;">
                                         <i class="bx bx-up-arrow-alt"></i>
@@ -580,6 +580,30 @@
     </script>
     <!-- Calendly badge widget end -->
 
+    <script>
+        function redirectToStore() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Define your app store URLs
+            const androidUrl = "https://play.google.com/store/apps/details?id=com.delivery.cari&pcampaignid=web_share";
+            const iosUrl = "https://apps.apple.com/us/app/cari-delivery/id6602897688";
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = androidUrl;
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = iosUrl;
+            } else {
+                // Optional: default or show a message
+                alert("Please open this link on a mobile device to download the app.");
+            }
+        }
+
+        document.getElementById('btnDownloadApp').addEventListener('click', function (event) {
+            event.preventDefault();
+            redirectToStore();
+        });
+
+    </script>
     <script src="assets/js/app.js"></script>
 </body>
 
