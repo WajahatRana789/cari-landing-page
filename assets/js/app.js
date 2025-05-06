@@ -252,9 +252,6 @@ $(document).ready(function () {
         });
     }
 
-    layoutCards();
-    rotateCards();
-
     // Re-layout on window resize
 
     let resizeTimeout;
@@ -271,4 +268,10 @@ $(document).ready(function () {
 
 
     adjustSlickCardHeight();
+
+
+    setTimeout(() => {
+        layoutCards();
+        rotateCards();
+    }, 5000);
 });

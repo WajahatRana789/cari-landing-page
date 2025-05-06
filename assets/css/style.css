@@ -1846,12 +1846,6 @@ body {
 }
 
 @media (min-width: 1600px) {
-    .hero-section {
-        background-position: 75% 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
 
     #app {
         width: 100%;
@@ -2170,6 +2164,13 @@ body {
 }
 
 @media(max-width: 600px) {
+    .hero-section {
+        background-position: 75% 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
     .about-section .about-flex-container .about-content {
         padding: 0;
     }
