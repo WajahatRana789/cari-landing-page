@@ -2168,7 +2168,10 @@ body {
         background-position: 75% 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+    }
+
+    .hero-center .hero-center-medium-text {
+        color: #000000;
     }
 
     .hero-section .logo-container .logo-img img,
