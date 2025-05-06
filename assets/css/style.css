@@ -2164,6 +2164,22 @@ body {
 }
 
 @media(max-width: 600px) {
+    .hero-center .hero-center-big-text {
+        font-size: 40px;
+    }
+
+    .hero-top .hero-top-text {
+        font-size: 13px;
+    }
+
+    .hero-center {
+        padding-top: 2rem;
+    }
+
+    .hero-center .hero-center-medium-text {
+        margin-top: 1rem;
+    }
+
     .hero-section {
         background-position: 75% 100%;
         background-size: cover;
