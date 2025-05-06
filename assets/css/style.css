@@ -2171,6 +2171,17 @@ body {
         background-attachment: fixed;
     }
 
+    .hero-section .logo-container .logo-img img,
+    .footer .logo-container .logo-img img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .hero-section .logo-container .logo-text,
+    .footer .logo-container .logo-text {
+        font-size: 38px;
+    }
+
     .about-section .about-flex-container .about-content {
         padding: 0;
     }
