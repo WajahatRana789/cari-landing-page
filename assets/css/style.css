@@ -827,7 +827,7 @@ body {
 .step-card .flex-container .img-box {
     position: relative;
     width: 400px;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
     background-color: #fff;
     display: flex;
@@ -840,7 +840,7 @@ body {
     -o-border-radius: 40px;
 }
 
-.step-card .flex-container .img-box img {
+.step-card .flex-container .img-box>img {
     position: absolute;
     top: 0;
     left: 0;
@@ -855,7 +855,7 @@ body {
     padding: 5px;
 }
 
-.step-card .flex-container .img-box img.route-image {
+.step-card .flex-container .img-box>img.route-image {
     width: 300px;
     position: relative;
     height: 200px;
@@ -864,7 +864,7 @@ body {
     -webkit-filter: hue-rotate(55deg);
 }
 
-.step-card .flex-container .img-box img.dollar-img {
+.step-card .flex-container .img-box>img.dollar-img {
     width: 300px;
     position: relative;
     height: 200px;
@@ -1317,6 +1317,61 @@ body {
 }
 
 /* Footer End */
+.uni-list-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.uni-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.uni-list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #dfdfdf;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 6px 20px;
+    margin-bottom: 8px;
+}
+
+.uni-list li:last-child {
+    margin-bottom: 0;
+}
+
+.uni-list li.active {
+    border-color: #000000;
+}
+
+.uni-list li .icon {
+    position: relative;
+}
+
+.uni-list li .icon img {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.uni-list li .name {
+    position: relative;
+    font-weight: 500;
+    margin-left: 14px;
+    font-size: 14px;
+}
 
 .how-it-works-container {
     position: relative;
@@ -2283,7 +2338,7 @@ body {
         height: max-content;
     }
 
-    .step-card .flex-container .img-box img {
+    .step-card .flex-container .img-box>img {
         border-radius: 20px;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
@@ -2292,8 +2347,8 @@ body {
         padding: 10px;
     }
 
-    .step-card .flex-container .img-box img.route-image,
-    .step-card .flex-container .img-box img.dollar-img {
+    .step-card .flex-container .img-box>img.route-image,
+    .step-card .flex-container .img-box>img.dollar-img {
         padding: 50px;
     }
 }
