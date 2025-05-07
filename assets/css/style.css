@@ -2164,6 +2164,24 @@ body {
 }
 
 @media(max-width: 600px) {
+    .about-section .about-images .image-1 {
+        width: 258px;
+        height: 255px;
+        left: -50px;
+        top: -190px;
+    }
+
+    .about-section .about-images .image-2 {
+        width: 175px;
+        height: 269px;
+        left: 90px;
+        top: -140px;
+    }
+
+    .mobile-app-links {
+        top: 160px;
+    }
+
     .hero-center .hero-center-big-text {
         font-size: 40px;
     }
