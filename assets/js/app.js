@@ -135,7 +135,7 @@ $(document).ready(function () {
 
     // slider
     const slider = $('.how-it-works-slides');
-    slider?.slick2({
+    slider.slick({
         // Basic settings
         slidesToShow: 1,
         slidesToScroll: 1,
