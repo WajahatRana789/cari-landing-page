@@ -252,21 +252,6 @@ $(document).ready(function () {
         });
     }
 
-    // Re-layout on window resize
-
-    let resizeTimeout;
-
-    $(window).on('resize', function () {
-        clearTimeout(resizeTimeout); // clear previous timeout on every resize
-        resizeTimeout = setTimeout(function () {
-            // This runs only when resizing stops for 300ms
-            clearTimeout(kbCardsAnimationInterval); // stop animation loop
-            layoutCards();  // reposition cards
-            rotateCards();  // restart animation
-        }, 500); // wait 300ms after last resize event
-    });
-
-
     adjustSlickCardHeight();
 
 
