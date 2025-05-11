@@ -2261,6 +2261,7 @@ body {
 
     .hero-center .hero-center-medium-text {
         color: #000000;
+        display: none;
     }
 
     .hero-section .logo-container .logo-img img,
