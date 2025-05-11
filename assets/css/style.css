@@ -2353,3 +2353,32 @@ body {
         padding: 50px;
     }
 }
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+    .container-fluid {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    .hero-center {
+        padding-top: 3.5rem;
+    }
+
+    .hero-top .hero-top-text {
+        font-size: 30px;
+    }
+
+    .hero-center .hero-center-big-text {
+        font-size: 120px;
+        line-height: 120px;
+    }
+
+    .hero-center .hero-center-medium-text {
+        font-size: 32px;
+        line-height: 40px;
+        margin-top: 3rem;
+    }
+    .hero-section-inner {
+        padding-top: 70px;
+    }
+}
