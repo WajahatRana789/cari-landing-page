@@ -10,16 +10,6 @@ const testimonials = [
         role: "Owner Of Restaurant"
     },
     {
-        quote: "CARI makes my life so easy as a restaurant owner. I wouldn't be where I am today without CARI.",
-        name: "Thad Lipinski",
-        role: "Owner Of Restaurant"
-    },
-    {
-        quote: "CARI makes my life so easy as a restaurant owner. I wouldn't be where I am today without CARI.",
-        name: "Darrell Steward",
-        role: "Love 'em so much - I bought two!"
-    },
-    {
         quote: "It's the best job I've had. Flexible hours, great pay, and I get to ride my bike.",
         name: "Tommy Lezynski",
         role: "Class of '27"
