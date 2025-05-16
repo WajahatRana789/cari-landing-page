@@ -531,17 +531,32 @@
         function redirectToStore() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            // Define your app store URLs
-            const androidUrl = "https://play.google.com/store/apps/details?id=com.delivery.cari&pcampaignid=web_share";
-            const iosUrl = "https://apps.apple.com/us/app/cari-delivery/id6602897688";
+            // App Store URLs
+            const playStoreUrl = "https://play.google.com/store/apps/details?id=com.delivery.cari&pcampaignid=web_share";
+            const appStoreUrl = "https://apps.apple.com/us/app/cari-delivery/id6602897688";
 
+            // Check for Android
             if (/android/i.test(userAgent)) {
-                window.location.href = androidUrl;
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = iosUrl;
-            } else {
-                // Optional: default or show a message
-                alert("Please open this link on a mobile device to download the app.");
+                window.location.href = playStoreUrl;
+            }
+            // Check for iOS (iPhone, iPad, iPod)
+            else if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                window.location.href = appStoreUrl;
+            }
+            // Check for Mac (desktop users)
+            else if (/Macintosh|MacIntel|MacPPC|Mac68K/i.test(userAgent)) {
+                // Mac users should go to the iOS App Store
+                window.location.href = appStoreUrl;
+            }
+            // Check for Windows/Linux (desktop users)
+            else if (/Win|Linux/i.test(userAgent)) {
+                // Windows/Linux users should go to the Play Store
+                window.location.href = playStoreUrl;
+            }
+            // Fallback for unknown devices
+            else {
+                const useAppStore = confirm("Download the app:\n\nClick OK for Apple App Store (iPhone/iPad/Mac)\nClick Cancel for Google Play Store (Android/Windows/Linux)");
+                window.location.href = useAppStore ? appStoreUrl : playStoreUrl;
             }
         }
 
