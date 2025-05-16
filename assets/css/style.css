@@ -2373,18 +2373,35 @@ body {
     }
 
     .hero-top .hero-top-text {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .hero-center .hero-center-big-text {
-        font-size: 120px;
-        line-height: 120px;
+        font-size: 104px;
+        line-height: 104px;
     }
 
+    .hero-content {
+        padding: 0;
+    }
+
+    .btn-primary {
+        height: 74px;
+        padding-top: 17px;
+        font-size: 20px;
+    }
+
+
     .hero-center .hero-center-medium-text {
-        font-size: 32px;
+        font-size: 26px;
         line-height: 40px;
-        margin-top: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .mobile-app-links img {
+        width: 277px;
+        height: 101px;
     }
 
     .hero-section-inner {
@@ -2407,28 +2424,28 @@ body {
     }
 
     .about-section .about-flex-container .about-content .content-1 {
-        font-size: 54px;
-        line-height: 58px;
+        font-size: 48px;
+        line-height: 54px;
     }
 
     .about-section .about-flex-container .about-content .content-2 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .how-it-works-slide-buttons button {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .step-card .heading {
-        font-size: 58px;
+        font-size: 48px;
     }
 
     .step-card .content {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .services-section .service-card .content {
-        font-size: 46px;
+        font-size: 44px;
     }
 
     .services-section .service-card .header .icon {
@@ -2445,13 +2462,13 @@ body {
     }
 
     .feature-1-section .text-md {
-        font-size: 30px;
+        font-size: 26px;
         line-height: 43px;
         margin-top: 60px;
     }
 
     .feature-2-section .text-md {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .feature-2-section .text-lg {
@@ -2469,7 +2486,7 @@ body {
     }
 
     .key-benefits-section .content .text-md {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .key-benefits-section .content .text-lg {
@@ -2483,9 +2500,13 @@ body {
     }
 
     .contact-section .contact-text-md {
-        font-size: 30px;
+        font-size: 26px;
         line-height: 40px;
         margin-top: 60px;
         width: calc(100% - 130px);
+    }
+
+    .footer .copyright-text {
+        font-size: 22px;
     }
 }
