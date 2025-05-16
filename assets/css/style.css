@@ -2400,8 +2400,16 @@ body {
     }
 
     .mobile-app-links img {
-        width: 277px;
-        height: 101px;
+        width: 267px;
+        height: 93px;
+    }
+
+    .mobile-app-links {
+        margin-top: 0;
+    }
+
+    .hero-section-inner {
+        padding-bottom: 280px;
     }
 
     .hero-section-inner {
