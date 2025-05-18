@@ -1,6 +1,6 @@
 const testimonials = [
     {
-        quote: "CARI has increase my orders by over 200%. I love working with CARI!",
+        quote: "CARI has increased my orders by over 200%. I love working with CARI!",
         name: "Thad Lipinski",
         role: "Owner Of Restaurant"
     },
@@ -12,12 +12,12 @@ const testimonials = [
     {
         quote: "It's the best job I've had. Flexible hours, great pay, and I get to ride my bike.",
         name: "Tommy Lezynski",
-        role: "Class of '27"
+        role: "Notre Dame, Class of 2027"
     },
     {
         quote: "It's way faster than other apps, and I can use my dining dollars. Total game changer.",
         name: "Stephen Perenich",
-        role: "Class of '28"
+        role: "Notre Dame, Class of 2028"
     },
     {
         quote: "CARI increased our campus orders — and their team handled everything.",
@@ -37,17 +37,17 @@ const testimonials = [
     {
         quote: "I get paid to stay on campus, stay active, and be part of something cool.",
         name: "Samuel Nuebel",
-        role: "Class of '28"
+        role: "Notre Dame, Class of 2028"
     },
     {
         quote: "I make good money between classes and don't need a car.",
         name: "Collin Pallissery",
-        role: "Class of '25"
+        role: "Notre Dame, Class of 2025"
     },
     {
         quote: "Fastest delivery I've ever had. I don't use anything else now.",
         name: "Sophia N.",
-        role: "Class of '26"
+        role: "Notre Dame, Class of 2026"
     }
 ];
 

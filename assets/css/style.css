@@ -2364,8 +2364,8 @@ body {
 
 @media screen and (min-width: 1600px) and (max-width: 1920px) {
     .container-fluid {
-        padding-left: 3.5rem;
-        padding-right: 3.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 
     .hero-center {
