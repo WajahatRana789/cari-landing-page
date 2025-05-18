@@ -2219,6 +2219,11 @@ body {
 }
 
 @media(max-width: 600px) {
+    .kb-card .content .review-text {
+        line-clamp: 10;
+        -webkit-line-clamp: 4;
+    }
+
     .steps-section {
         padding-top: 0;
     }
