@@ -2197,6 +2197,24 @@ body {
 }
 
 @media(max-width: 600px) {
+    .feature-2-section .text-lg {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .feature-2-section .img-box {
+        top: 70px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .feature-2-section .img-box img {
+        width: 100px;
+        height: 230px;
+        object-fit: contain;
+    }
+
     .steps-section {
         padding-top: 0;
     }
