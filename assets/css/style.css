@@ -992,7 +992,6 @@ body {
 .kb-card {
     position: relative;
     top: 100px;
-    max-height: 170px;
     min-height: 170px;
     width: 560px;
     padding: 22px;
@@ -1062,26 +1061,12 @@ body {
     position: relative;
     font-weight: 700;
     font-size: 20px;
-    display: -webkit-box;
-    max-width: calc(100% - 60px);
-    line-clamp: 1;
-    -webkit-line-clamp: 1;
-    box-orient: vertical;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .kb-card .content .role {
     position: relative;
     font-weight: 700;
     font-size: 16px;
-    display: -webkit-box;
-    max-width: calc(100% - 1px);
-    line-clamp: 1;
-    -webkit-line-clamp: 1;
-    box-orient: vertical;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .kb-card .content .review-text {
@@ -1089,13 +1074,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #55585E;
-    display: -webkit-box;
-    max-width: calc(100% - 1px);
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-    box-orient: vertical;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
     margin-top: 8px;
     transition: all 500ms ease-in-out;
     -webkit-transition: all 500ms ease-in-out;
@@ -2219,11 +2197,6 @@ body {
 }
 
 @media(max-width: 600px) {
-    .kb-card .content .review-text {
-        line-clamp: 10;
-        -webkit-line-clamp: 4;
-    }
-
     .steps-section {
         padding-top: 0;
     }

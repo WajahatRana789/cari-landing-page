@@ -269,53 +269,72 @@ $(document).ready(function () {
     function layoutCards() {
         const container = $('.kb-cards-container');
         const cards = container.children('.kb-card');
-        const cardHeight = cards.first().outerHeight(true);
 
-        // Reposition all cards absolutely
+        // Calculate cumulative heights for positioning
+        let cumulativeHeight = 0;
         cards.each(function (i) {
-            $(this).css({
+            const $card = $(this);
+            $card.css({
                 position: 'absolute',
-                top: i * cardHeight,
+                top: cumulativeHeight,
                 left: 0
             });
+            cumulativeHeight += $card.outerHeight(true);
         });
     }
+
     function rotateCards() {
         const container = $('.kb-cards-container');
         const cards = container.children('.kb-card');
 
+        if (cards.length === 0) return;
+
+        // Store current positions and heights
         let positions = [];
+        let heights = [];
         cards.each(function () {
-            positions.push($(this).position().top);
+            const $card = $(this);
+            positions.push($card.position().top);
+            heights.push($card.outerHeight(true));
         });
 
         const firstCard = cards.eq(0);
+        const firstCardHeight = heights[0];
 
-        // Animate first card out to the right
+        // Animate first card out
         firstCard.animate({
             top: '-500px',
             opacity: 0
         }, 1000, function () {
-            const lastTop = positions[positions.length - 1];
-            const lastOffset = lastTop + $(this).outerHeight(true);
-
-            // Immediately move first card below all
-            $(this).css({
-                top: lastOffset,
-                left: 0
-            });
-
-            // Append to container
-            container.append(this);
-
-            // Animate other cards upward
+            // Calculate new position at bottom (sum of all remaining card heights)
+            let newBottomPosition = 0;
             for (let i = 1; i < cards.length; i++) {
-                cards.eq(i).animate({ top: positions[i - 1] }, 1000);
+                newBottomPosition += heights[i];
             }
 
-            // Animate first card up to the last position
+            // Immediately move first card to bottom
+            $(this).css({
+                top: newBottomPosition,
+                left: 0,
+                opacity: 0
+            });
+
+            // Move DOM element to end
+            container.append(this);
+
+            // Animate remaining cards up
+            let currentPosition = 0;
+            for (let i = 1; i < cards.length; i++) {
+                const $card = cards.eq(i);
+                $card.animate({
+                    top: currentPosition
+                }, 1000);
+                currentPosition += heights[i];
+            }
+
+            // Animate first card into last position
             $(this).animate({
-                top: lastTop,
+                top: currentPosition - firstCardHeight,
                 opacity: 1
             }, 300);
 
