@@ -627,7 +627,7 @@ body {
 .feature-2-section {
     position: relative;
     padding: 0;
-    background: linear-gradient(#EDEBFD 40%, #aea5f9);
+    background: linear-gradient(#EDEBFD 40%, #cdc7f9);
 }
 
 .feature-2-section .text-lg {
@@ -1469,6 +1469,10 @@ body {
 }
 
 @media(max-width: 991px) {
+    .feature-2-section {
+        background: linear-gradient(#EDEBFD 40%, #beb7f9);
+    }
+
     .feature-1-section .img-box {
         height: 1100px;
     }
