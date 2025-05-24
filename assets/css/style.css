@@ -2217,7 +2217,7 @@ body {
     }
 
     .feature-2-section .img-box {
-        top: 70px;
+        top: 30px;
         display: flex;
         align-items: center;
         left: 0;
@@ -2229,7 +2229,7 @@ body {
     }
 
     .feature-2-section .img-box img {
-        width: 120px;
+        width: 145px;
         object-fit: contain;
     }
 
