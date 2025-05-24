@@ -2197,6 +2197,26 @@ body {
 }
 
 @media(max-width: 600px) {
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 14px;
+        padding-top: 14px;
+        height: max-content;
+    }
+
+    .mobile-app-links {
+        top: 130px;
+    }
+
+    .mobile-app-links img {
+        width: 142px;
+        height: 52px;
+    }
+
+    .hero-section-inner {
+        padding-bottom: 250px;
+    }
+
     .services-section .service-card .header .icon {
         font-size: 40px;
     }
@@ -2211,7 +2231,7 @@ body {
     }
 
     .how-it-works-slide-buttons button {
-        font-size: 11px;
+        font-size: 12px;
         padding: 5px 10px;
     }
 
@@ -2293,29 +2313,25 @@ body {
     }
 
     .about-section .about-images .image-1 {
-        width: 258px;
-        height: 255px;
+        width: 238px;
+        height: 235px;
         left: -35px;
-        top: -190px;
+        top: -150px;
     }
 
     .about-section .about-images .image-2 {
-        width: 175px;
-        height: 269px;
-        left: 130px;
-        top: -105px;
-    }
-
-    .mobile-app-links {
-        top: 160px;
+        width: 155px;
+        height: 249px;
+        left: 120px;
+        top: -85px;
     }
 
     .hero-center .hero-center-big-text {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .hero-top .hero-top-text {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .hero-center {
@@ -2339,17 +2355,18 @@ body {
 
     .hero-section .logo-container .logo-img img,
     .footer .logo-container .logo-img img {
-        width: 46px;
-        height: 46px;
+        width: 40px;
+        height: 40px;
     }
 
     .hero-section .logo-container .logo-text,
     .footer .logo-container .logo-text {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .about-section .about-flex-container .about-content {
         padding: 0;
+        padding-top: 30px;
     }
 
     .feature-1-section .text-md {
