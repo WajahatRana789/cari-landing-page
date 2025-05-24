@@ -2197,6 +2197,10 @@ body {
 }
 
 @media(max-width: 600px) {
+    .footer {
+        padding-bottom: 40px;
+    }
+
     .key-benefits-section .content .text-md {
         font-size: 14px;
     }

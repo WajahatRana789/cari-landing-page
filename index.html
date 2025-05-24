@@ -492,6 +492,7 @@
                     </div>
                 </div>
             </div>
+            <div id="window-size"></div>
         </div>
     </div>
 
@@ -624,6 +625,21 @@
 
 
     <script src="assets/js/app.js"></script>
+    <script>
+        function updateWindowSize() {
+            const width = $(window).width();
+            const height = $(window).height();
+            $('#window-size').text(`Width: ${width}px, Height: ${height}px`);
+        }
+
+        // Call on page load
+        $(document).ready(function () {
+            updateWindowSize();
+
+            // Update on resize
+            $(window).resize(updateWindowSize);
+        });
+    </script>
 </body>
 
 </html>
