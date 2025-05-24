@@ -2197,6 +2197,25 @@ body {
 }
 
 @media(max-width: 600px) {
+    .step-card .heading {
+        font-size: 24px;
+    }
+
+    .services-section .service-card .content {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .feature-1-section .text-lg {
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -1px;
+    }
+
+    .feature-1-section .text-md {
+        font-size: 14px;
+    }
+
     .footer {
         padding-bottom: 40px;
     }
@@ -2342,6 +2361,11 @@ body {
 
     .step-card .content {
         line-height: 1.5;
+        font-size: 14px;
+    }
+
+    .uni-list li .name {
+        font-size: 11px;
     }
 
     .step-card .flex-container .img-box {
