@@ -190,8 +190,8 @@ body {
     padding: 0 2rem;
     padding-left: 4rem;
     font-weight: 900;
-    font-size: 22px;
-    line-height: 45px;
+    font-size: 20px;
+    line-height: 43px;
     letter-spacing: 0px;
 
 }
@@ -274,8 +274,8 @@ body {
 .hero-center .hero-center-big-text {
     position: relative;
     font-weight: 700;
-    font-size: 78px;
-    line-height: 78px;
+    font-size: 68px;
+    line-height: 68px;
     letter-spacing: -4px;
 }
 
@@ -669,12 +669,14 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .feature-2-section .img-box img {
     position: relative;
     width: 70%;
     object-fit: contain;
+    height: 600px;
 }
 
 .feature-2-section .content {
@@ -835,7 +837,7 @@ body {
 
 .step-card .flex-container .img-box {
     position: relative;
-    width: 400px;
+    width: 320px;
     height: 220px;
     overflow: hidden;
     background-color: #fff;
@@ -867,7 +869,7 @@ body {
 .step-card .flex-container .img-box>img.route-image {
     width: 300px;
     position: relative;
-    height: 200px;
+    height: 160px;
     object-fit: contain;
     filter: hue-rotate(55deg);
     -webkit-filter: hue-rotate(55deg);
@@ -876,7 +878,7 @@ body {
 .step-card .flex-container .img-box>img.dollar-img {
     width: 300px;
     position: relative;
-    height: 200px;
+    height: 160px;
     object-fit: contain;
     filter: hue-rotate(55deg);
     -webkit-filter: hue-rotate(55deg);
@@ -2458,10 +2460,18 @@ body {
     }
 }
 
-@media screen and (min-width: 1600px) and (max-width: 1920px) {
+@media screen and (min-width: 1600px) and (max-width: 2600px) {
     .container-fluid {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
+    }
+
+    .step-card .flex-container .img-box {
+        width: 400px;
+    }
+
+    .step-card .flex-container .img-box>img.dollar-img {
+        height: 200px;
     }
 
     .hero-center {
@@ -2578,15 +2588,29 @@ body {
     .feature-2-section .text-lg {
         font-size: 77px;
         line-height: 90px;
+        padding-right: 200px;
+    }
+
+    .feature-2-section .img-box img {
+        width: 90%;
+        height: 100%;
     }
 
     .feature-2-section .content {
         padding-top: 200px;
+        padding-left: 120px;
+    }
+
+    .key-benefits-section {
+        padding-top: 0;
     }
 
     .feature-2-section .img-box {
-        width: 475px;
-        height: 1180px;
+        width: 505px;
+        display: flex;
+        align-items: center;
+        top: -120px;
+        left: 170px;
     }
 
     .key-benefits-section .content .text-md {
