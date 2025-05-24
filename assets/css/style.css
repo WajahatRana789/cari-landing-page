@@ -2204,14 +2204,17 @@ body {
 
     .feature-2-section .img-box {
         top: 70px;
-        height: 100%;
         display: flex;
         align-items: center;
     }
 
+    .feature-2-section .text-md {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
     .feature-2-section .img-box img {
-        width: 100px;
-        height: 230px;
+        width: 120px;
         object-fit: contain;
     }
 
@@ -2300,12 +2303,6 @@ body {
         padding-right: 0;
     }
 
-    .feature-2-section .img-box {
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
     .contact-section {
         padding-top: 80px;
     }
@@ -2317,6 +2314,11 @@ body {
     .contact-section .contact-image-box img {
         object-fit: cover;
         height: 380px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
     }
 
     .contact-section .contact-form-container {
