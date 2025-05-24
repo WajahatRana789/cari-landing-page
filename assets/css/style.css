@@ -65,7 +65,6 @@ body {
 
 #app {
     position: relative;
-    max-width: 1416px;
     min-height: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -108,15 +107,14 @@ body {
     position: relative;
     color: #fff;
     background: linear-gradient(90deg, #4786FF 0%, #4B39EF 115%);
-    padding: 12px 40px;
+    padding: 10px 40px;
     font-weight: 600;
-    height: 60px;
-    padding-top: 16px;
+    height: 56px;
+    padding-top: 14px;
     overflow: hidden;
     border: none;
     display: flex;
     align-items: center;
-    gap: 12px;
     cursor: pointer;
 }
 
@@ -171,13 +169,13 @@ body {
 
 .hero-section-inner {
     position: relative;
-    padding: 70px 0;
-    padding-bottom: 300px;
+    padding: 60px 0;
+    padding-bottom: 220px;
 }
 
 .hero-content {
     position: relative;
-    padding: 12px;
+    padding: 0;
 }
 
 .hero-top {
@@ -192,7 +190,7 @@ body {
     padding: 0 2rem;
     padding-left: 4rem;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 45px;
     letter-spacing: 0px;
 
@@ -246,7 +244,9 @@ body {
     text-transform: uppercase;
     border: none;
     outline: none;
-    padding: 8px 16px;
+    padding: 8px 24px;
+    letter-spacing: 1px;
+    padding-top: 10px;
     font-weight: 700;
     white-space: nowrap;
     font-family: 'New Order', sans-serif;
@@ -268,25 +268,31 @@ body {
 
 .hero-center {
     position: relative;
-    padding-top: 2.5rem;
+    padding-top: 1.75rem;
 }
 
 .hero-center .hero-center-big-text {
     position: relative;
     font-weight: 700;
-    font-size: 120px;
-    line-height: 120px;
-    letter-spacing: -8px;
+    font-size: 78px;
+    line-height: 78px;
+    letter-spacing: -4px;
 }
 
 .hero-center .hero-center-medium-text {
     position: relative;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     color: #55585E;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 22px;
     letter-spacing: 0px;
+}
+
+.get-cari-now-button {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 14px;
 }
 
 .mobile-app-links {
@@ -300,8 +306,8 @@ body {
 
 .mobile-app-links img {
     position: relative;
-    width: 242px;
-    height: 90px;
+    width: 175px;
+    height: 65px;
     object-fit: cover;
 }
 
@@ -332,16 +338,16 @@ body {
 .about-section .about-flex-container .about-content .content-1 {
     position: relative;
     font-weight: 600;
-    font-size: 38px;
-    line-height: 43px;
+    font-size: 32px;
+    line-height: 40px;
 }
 
 .about-section .about-flex-container .about-content .content-2 {
     font-weight: 300;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 30px;
     letter-spacing: 0px;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .about-section .about-images {
@@ -355,25 +361,25 @@ body {
 
 .about-section .about-images .image-1 {
     position: relative;
-    width: 590px;
-    height: 590px;
+    width: 510px;
+    height: 510px;
     transform: rotate(26.34deg) scale(1.1);
     -webkit-transform: rotate(26.34deg) scale(1.1);
     -moz-transform: rotate(26.34deg) scale(1.1);
     -ms-transform: rotate(26.34deg) scale(1.1);
     -o-transform: rotate(26.34deg) scale(1.1);
-    top: -250px;
+    top: -180px;
     z-index: 2;
-    left: -30px;
+    left: -60px;
 }
 
 .about-section .about-images .image-2 {
     position: absolute;
-    width: 388px;
-    height: 571px;
+    width: 338px;
+    height: 521px;
     z-index: 1;
     left: 250px;
-    top: 180px;
+    top: 140px;
 }
 
 .about-section .rect {
@@ -471,7 +477,7 @@ body {
     background-color: #FBFBFB;
     display: flex;
     flex-direction: column;
-    min-height: 520px;
+    min-height: 480px;
     transition: all 500ms ease-in-out;
     -webkit-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
@@ -493,7 +499,7 @@ body {
 
 .services-section .service-card .header .icon {
     position: relative;
-    font-size: 60px;
+    font-size: 48px;
     color: #656D79;
     transition: color 500ms ease-in-out;
     -webkit-transition: color 500ms ease-in-out;
@@ -510,7 +516,7 @@ body {
     position: relative;
     padding: 1.75rem 2.35rem;
     padding-top: 2.75rem;
-    font-size: 43px;
+    font-size: 32px;
     font-weight: 700;
     color: #101010;
     margin-top: auto;
@@ -575,20 +581,20 @@ body {
     position: relative;
     color: #fff;
     font-weight: 700;
-    font-size: 66px;
-    line-height: 86px;
-    letter-spacing: -3px;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: -1px;
 }
 
 .feature-1-section .text-md {
     position: relative;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 34px;
     letter-spacing: 0px;
     color: #fff;
     margin: 20px 0;
-    width: 432px;
+    width: 390px;
 }
 
 .feature-1-section .img-box {
@@ -598,7 +604,7 @@ body {
     width: calc(100% + 45px);
     height: 100%;
     overflow: hidden;
-    height: 900px;
+    height: 856px;
     margin-bottom: -2px;
 }
 
@@ -616,7 +622,7 @@ body {
     position: relative;
     padding: 80px 1.5rem;
     padding-bottom: 190px;
-    padding-top: 140px;
+    padding-top: 160px;
     width: 532px;
 }
 
@@ -634,44 +640,46 @@ body {
     position: relative;
     color: #000000;
     font-weight: 700;
-    font-size: 66px;
-    line-height: 86px;
-    letter-spacing: -3px;
+    font-size: 52px;
+    line-height: 66px;
+    letter-spacing: -2px;
+    padding-right: 100px;
 }
 
 .feature-2-section .text-md {
     position: relative;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 36px;
     letter-spacing: 0px;
     color: #000000;
     margin: 20px 0;
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-bottom: 0;
     padding-right: 140px;
 }
 
 .feature-2-section .img-box {
     position: relative;
     width: 425px;
-    height: 1030px;
-    margin-top: -140px;
-    margin-bottom: -100px;
+    height: unset;
+    margin-top: -30px;
     left: 50px;
     z-index: 1;
-    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .feature-2-section .img-box img {
     position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 70%;
+    object-fit: contain;
 }
 
 .feature-2-section .content {
-    padding-top: 220px;
-    padding-left: 100px;
+    padding-top: 100px;
+    padding-left: 24px;
 }
 
 /* Feature 2 Section End */
@@ -682,12 +690,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 0 120px 0;
+    padding: 30px 0 80px 0;
 }
 
 .how-it-works-slide-buttons button {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 0px;
     color: #8174F3;
     border: 4px solid transparent;
@@ -764,6 +772,7 @@ body {
 .steps-section-inner {
     position: relative;
     padding: 100px 0;
+    padding-top: 50px;
 }
 
 .steps-section-inner .tabs-container {
@@ -810,7 +819,7 @@ body {
 .step-card .heading {
     position: relative;
     font-weight: 700;
-    font-size: 52px;
+    font-size: 42px;
     line-height: 80px;
     letter-spacing: -1px;
     margin-bottom: 24px;
@@ -876,7 +885,7 @@ body {
 .step-card .content {
     position: relative;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 40px;
     letter-spacing: 0px;
     color: #fff;
@@ -901,6 +910,7 @@ body {
 .key-benefits-section {
     position: relative;
     padding: 200px 0;
+    padding-top: 100px;
     background: linear-gradient(#CBC5F9, #EBE9FD);
 }
 
@@ -911,7 +921,7 @@ body {
 .key-benefits-section .content .text-lg {
     position: relative;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 52px;
     letter-spacing: -3px;
     color: #000000;
     margin-bottom: 40px;
@@ -920,10 +930,11 @@ body {
 .key-benefits-section .content .text-md {
     position: relative;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     letter-spacing: 0px;
     color: #55585E;
     margin-top: 2rem;
+    padding-right: 1rem;
 }
 
 .kb-cards-container {
@@ -1060,19 +1071,19 @@ body {
 .kb-card .content .name {
     position: relative;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .kb-card .content .role {
     position: relative;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .kb-card .content .review-text {
     position: relative;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     color: #55585E;
     margin-top: 8px;
     transition: all 500ms ease-in-out;
@@ -1086,18 +1097,17 @@ body {
 .contact-section {
     position: relative;
     background-color: #4B39EF;
-    padding: 200px 0;
+    padding-top: 170px;
+    padding-bottom: 100px;
 }
 
 .contact-section .buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-top: 1.5rem;
 }
 
 .contact-section .buttons-container .btn-primary {
     outline: 2px solid #fff;
+    width: 100%;
 }
 
 .contact-section .rect-top-1 {
@@ -1135,8 +1145,8 @@ body {
 
 .contact-section .contact-image-box img {
     position: relative;
-    width: 547px;
-    height: 628px;
+    width: 517px;
+    height: 538px;
     border-radius: 55px;
     -webkit-border-radius: 55px;
     -moz-border-radius: 55px;
@@ -1150,15 +1160,15 @@ body {
     position: relative;
     color: #fff;
     font-weight: 700;
-    font-size: 66px;
-    line-height: 86px;
+    font-size: 52px;
+    line-height: 66px;
     letter-spacing: -3px;
 }
 
 .contact-section .contact-text-md {
     position: relative;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 40px;
     letter-spacing: 0px;
     color: #fff;
@@ -1172,7 +1182,7 @@ body {
 
 .contact-section .form-control {
     background-color: #fff;
-    padding: 14px;
+    padding: 10px 14px;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -1531,10 +1541,6 @@ body {
         letter-spacing: 0px;
     }
 
-    .contact-section .buttons-container {
-        display: block;
-    }
-
     .contact-section .buttons-container button {
         width: 100%;
         margin-bottom: 1rem;
@@ -1627,6 +1633,7 @@ body {
         font-size: 40px;
         line-height: 48px;
         letter-spacing: -1px;
+        padding-right: 0;
     }
 
     .feature-2-section .text-md {
@@ -1768,19 +1775,8 @@ body {
         padding: 50px 0;
     }
 
-    .feature-2-section .img-box {
-        height: auto;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        top: -120px;
-        margin-bottom: -120px;
-    }
-
     .feature-2-section .img-box img {
-        width: 136px;
-        height: 330px;
+        width: 185px;
         object-fit: contain;
     }
 
