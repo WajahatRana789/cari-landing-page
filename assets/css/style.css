@@ -2197,6 +2197,19 @@ body {
 }
 
 @media(max-width: 600px) {
+    .services-section .service-card .header .icon {
+        font-size: 40px;
+    }
+
+    .about-section .about-flex-container .about-content .content-1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .about-section .about-flex-container .about-content .content-2 {
+        font-size: 14px;
+    }
+
     .how-it-works-slide-buttons button {
         font-size: 11px;
         padding: 5px 10px;
@@ -2271,7 +2284,11 @@ body {
     }
 
     .steps-section-inner {
-        padding-top: 50px;
+        padding-top: 0;
+    }
+
+    .steps-section {
+        padding-bottom: 40px;
     }
 
     .about-section .about-images .image-1 {
