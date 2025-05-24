@@ -2197,6 +2197,20 @@ body {
 }
 
 @media(max-width: 600px) {
+    .how-it-works-slide-buttons button {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .step-card {
+        padding: 24px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+    }
+
     .step-card .heading {
         font-size: 24px;
     }
@@ -2364,8 +2378,18 @@ body {
         font-size: 14px;
     }
 
+    .uni-list li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .uni-list li .name {
         font-size: 11px;
+    }
+
+    .uni-list li .icon img {
+        width: 16px;
+        height: 16px;
     }
 
     .step-card .flex-container .img-box {
