@@ -650,7 +650,7 @@ body {
 .feature-2-section .text-md {
     position: relative;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 36px;
     letter-spacing: 0px;
     color: #000000;
@@ -1487,6 +1487,11 @@ body {
 }
 
 @media(max-width: 991px) {
+    .feature-2-section .img-box {
+        width: 100%;
+        left: 0;
+    }
+
     .key-benefits-section .content .text-md .text-md-second {
         margin-bottom: 2rem;
         line-height: unset;
@@ -1654,6 +1659,7 @@ body {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0px;
+        padding-right: 0;
     }
 
 
@@ -2298,7 +2304,7 @@ body {
     }
 
     .feature-2-section .img-box {
-        top: 30px;
+        top: 0;
         display: flex;
         align-items: center;
         left: 0;
@@ -2310,8 +2316,9 @@ body {
     }
 
     .feature-2-section .img-box img {
-        width: 145px;
-        object-fit: contain;
+        width: 165px;
+        object-fit: cover;
+        height: 400px;
     }
 
     .steps-section {
@@ -2474,6 +2481,14 @@ body {
 }
 
 @media screen and (min-width: 1600px) and (max-width: 2600px) {
+    .kb-cards-container {
+        height: 785px;
+    }
+
+    .kb-cards-container::after {
+        bottom: -30px;
+    }
+
     .container-fluid {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
@@ -2556,7 +2571,9 @@ body {
     }
 
     .about-section .about-flex-container .about-content .content-2 {
-        font-size: 26px;
+        font-size: 30px;
+        line-height: 1.5;
+        margin-top: 80px;
     }
 
     .how-it-works-slide-buttons button {
@@ -2595,7 +2612,7 @@ body {
     }
 
     .feature-2-section .text-md {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .feature-2-section .text-lg {
@@ -2627,7 +2644,7 @@ body {
     }
 
     .key-benefits-section .content .text-md {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .key-benefits-section .content .text-lg {
