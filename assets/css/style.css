@@ -1803,7 +1803,7 @@ body {
     .kb-cards-container {
         margin-top: 60px;
         margin-bottom: 100px;
-        height: 750px;
+        height: 800px;
     }
 
     .kb-card {
@@ -1857,6 +1857,7 @@ body {
         left: 0;
         width: 100%;
         background: linear-gradient(transparent, #d5d0fa);
+        bottom: 0;
     }
 
     .hero-section .join-now-button {
