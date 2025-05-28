@@ -2608,8 +2608,12 @@ body {
         line-height: 100px;
     }
 
+    .feature-1-section .content {
+        padding-top: 200px;
+    }
+
     .feature-1-section .text-md {
-        font-size: 26px;
+        font-size: 28px;
         line-height: 43px;
         margin-top: 60px;
     }
