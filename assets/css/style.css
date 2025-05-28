@@ -1489,6 +1489,7 @@ body {
 @media(max-width: 991px) {
     .key-benefits-section .content .text-md .text-md-second {
         margin-bottom: 2rem;
+        line-height: unset;
     }
 
     .feature-2-section {
