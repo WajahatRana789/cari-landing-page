@@ -2670,3 +2670,11 @@ body {
         font-size: 22px;
     }
 }
+
+@media(max-width: 400px) {
+    .feature-2-section .img-box img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+}
