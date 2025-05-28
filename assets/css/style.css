@@ -1803,6 +1803,7 @@ body {
     .kb-cards-container {
         margin-top: 60px;
         margin-bottom: 100px;
+        height: 750px;
     }
 
     .kb-card {
