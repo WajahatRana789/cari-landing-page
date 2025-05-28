@@ -2310,6 +2310,7 @@ body {
         display: flex;
         align-items: center;
         left: 0;
+        margin: 0;
     }
 
     .feature-2-section .text-md {
@@ -2672,6 +2673,10 @@ body {
 }
 
 @media(max-width: 400px) {
+    .feature-2-section .img-box {
+        margin: 0;
+    }
+
     .feature-2-section .img-box img {
         object-fit: contain;
         height: 100%;
