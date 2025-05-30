@@ -947,7 +947,7 @@ body {
 
 .kb-cards-container {
     position: relative;
-    height: 610px;
+    height: 580px;
     overflow: hidden;
 }
 
@@ -2485,7 +2485,7 @@ body {
 
 @media screen and (min-width: 1600px) and (max-width: 2600px) {
     .kb-cards-container {
-        height: 785px;
+        height: 725px;
     }
 
     .kb-cards-container::after {
