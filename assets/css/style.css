@@ -1363,6 +1363,11 @@ body {
     object-fit: contain;
 }
 
+.uni-list li .icon img.vanderbilt-img {
+    width: 24px;
+    height: 24px;
+}
+
 .uni-list li .name {
     position: relative;
     font-weight: 500;
@@ -2452,6 +2457,11 @@ body {
     .uni-list li .icon img {
         width: 16px;
         height: 16px;
+    }
+
+    .uni-list li .icon img.vanderbilt-img {
+        width: 18px;
+        height: 18px;
     }
 
     .step-card .flex-container .img-box {
